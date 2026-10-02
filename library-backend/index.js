@@ -101,7 +101,7 @@ let books = [
 const typeDefs = `
   type Book {
     title: String!
-    published: Int!
+    published: String!
     author: String!
     id: String!
     genres: [String!]!
@@ -110,7 +110,7 @@ const typeDefs = `
   type Author {
     name: String!
     id: String!
-    born: Int
+    born: String
     bookCount: Int!
   }
 
@@ -124,13 +124,13 @@ const typeDefs = `
   type Mutation {
     addBook(
       title: String!
-      published: Int!
+      published: String!
       author: String!
       genres: [String!]!
     ): Book
     editAuthor(
       name: String!
-      setBornTo: Int!
+      setBornTo: String!
     ): Author
   }
 `
